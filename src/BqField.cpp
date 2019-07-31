@@ -61,6 +61,9 @@ enum BqType {
 };
 
 BqType parse_bq_type(std::string x) {
+  for(int i = 0; i < x.size(); i++) {
+    x.at(i) = toupper(x.at(i));
+  }
   if (x == "INTEGER") {
     return BQ_INTEGER;
   } else if (x == "NUMERIC") {
