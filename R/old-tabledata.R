@@ -205,6 +205,7 @@ converters <- function() {
   list(
     integer = as.integer,
     float = as.double,
+    numeric = as.double,
     boolean = as.logical,
     string = identity,
     timestamp = function(x) {
